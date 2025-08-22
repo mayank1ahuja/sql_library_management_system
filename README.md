@@ -254,9 +254,8 @@ Write a query to identify members who have overdue books (assume a 30-day return
 
 ```sql
 /*Approach: 1. ((issued_status == members)== books) == return_status
-		  2. filter out the returned books
-		  3. check for overdue > 30 days
-*/
+		    2. filter out the returned books
+		    3. check for overdue > 30 days */
 SELECT
 	   ist.issued_member_id,
        mem.member_name,
