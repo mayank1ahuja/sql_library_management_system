@@ -1,6 +1,6 @@
-# Library Management System using SQL Project --P2
+# Library Management System using SQL Project
 
-## Project Overview
+## 📖Project Overview
 
 **Project Title**: Library Management System  
 **Level**: Intermediate  
@@ -10,14 +10,14 @@ This project demonstrates the implementation of a Library Management System usin
 
 ![Library](https://github.com/mayank1ahuja/sql_library_management_system/blob/9c892056b58c9e05af1572a2bc9621b74d857436/library.jpg)
 
-## Objectives
+## 📌Objectives
 
 1. **Set up the Library Management System Database**: Create and populate the database with tables for branches, employees, members, books, issued status, and return status.
 2. **CRUD Operations**: Perform Create, Read, Update, and Delete operations on the data.
 3. **CTAS (Create Table As Select)**: Utilize CTAS to create new tables based on query results.
 4. **Advanced SQL Queries**: Develop complex queries to analyze and retrieve specific data.
 
-## Project Structure
+## 📂Project Structure
 
 ### 1. Database Setup
 ![ERD](https://github.com/mayank1ahuja/sql_library_management_system/blob/9c892056b58c9e05af1572a2bc9621b74d857436/library_erd.png)
@@ -117,7 +117,7 @@ ADD CONSTRAINT fk_issued_status
 FOREIGN KEY (issued_id) REFERENCES issued_status(issued_id); 
 ```
 
-### 2. CRUD Operations
+### 2. 📝CRUD Operations
 
 - **Create**: Inserted sample records into the `books` table.
 - **Read**: Retrieved and displayed data from various tables.
@@ -168,7 +168,7 @@ GROUP BY issued_member_id
 HAVING COUNT (issued_id) > 1;
 ```
 
-### 3. CTAS (Create Table As Select)
+### 3. 🗄️CTAS (Create Table As Select)
 
 - **Task 6: Create Summary Tables**: Used CTAS to generate new tables based on query results - each book and total book_issued_cnt**
 
@@ -187,7 +187,7 @@ SELECT * FROM book_counts;
  ```
 
 
-### 4. Data Analysis & Findings
+### 4. 📊Data Analysis & Findings
 
 The following SQL queries were used to address specific questions:
 
@@ -210,13 +210,13 @@ ON ist.issued_book_isbn = b.isbn
 GROUP BY 1; 
 ```
 
-9. **List Members Who Registered in the Last 180 Days**:
+9. **Task 9: List Members Who Registered in the Last 180 Days**:
 ```sql
 SELECT * FROM members
 WHERE reg_date >= CURRENT_DATE - INTERVAL '180 days';
 ```
 
-10. **List Employees with Their Branch Manager's Name and their branch details**:
+10. **Task 10: List Employees with Their Branch Manager's Name and their branch details**:
 
 ```sql
 SELECT e1.*,
@@ -247,7 +247,7 @@ WHERE rs.return_id IS NOT NULL;
 
 ```
 
-## Advanced SQL Operations
+## ⚙️Advanced SQL Operations
 
 **Task 13: Identify Members with Overdue Books**  
 Write a query to identify members who have overdue books (assume a 30-day return period). Display the member's_id, member's name, book title, issue date, and days overdue.
@@ -373,13 +373,13 @@ JOIN branch AS b ON e.branch_id = b.branch_id
 GROUP BY 1, 2;
 ```
 
-## Reports
+## 📑Reports
 
 - **Database Schema**: Detailed table structures and relationships.
 - **Data Analysis**: Insights into book categories, employee salaries, member registration trends, and issued books.
 - **Summary Reports**: Aggregated data on high-demand books and employee performance.
 
-## Conclusion
+## 🔎Conclusion
 
 This project demonstrates the application of SQL skills in creating and managing a library management system. It includes database setup, data manipulation, and advanced querying, providing a solid foundation for data management and analysis.
 
